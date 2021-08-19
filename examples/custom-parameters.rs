@@ -1,4 +1,5 @@
-#![feature(proc_macro_hygiene)]
+// not available on stable
+// #![feature(proc_macro_hygiene)]
 
 extern crate phf;
 extern crate punkt;

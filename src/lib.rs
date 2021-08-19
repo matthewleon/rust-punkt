@@ -137,16 +137,18 @@
 //! }
 //! ```
 
-#![cfg_attr(test, feature(test))]
-#![feature(proc_macro_hygiene)]
+// not available on stable. Commenting this out will likely cause a lot of hell.
+// #![cfg_attr(test, feature(test))]
+// it's not clear if/where this was used, so commenting out for now
+// #![feature(proc_macro_hygiene)]
 #![warn(missing_docs)]
 
 extern crate freqdist;
 extern crate num;
 extern crate phf;
 extern crate rustc_serialize;
-#[cfg(test)]
-extern crate test;
+// #[cfg(test)]
+// extern crate test;
 #[cfg(test)]
 extern crate walkdir;
 

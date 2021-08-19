@@ -779,6 +779,8 @@ fn test_data_load_from_json_test() {
   assert!(data.contains_collocation("##number##", "corrections"));
 }
 
+
+// this will generate a warning because the tests below are commented out
 #[cfg(test)]
 macro_rules! bench_trainer(
   ($name:ident, $doc:expr) => (
@@ -793,26 +795,28 @@ macro_rules! bench_trainer(
   )
 );
 
-#[cfg(test)]
-bench_trainer!(
-  bench_trainer_short,
-  include_str!("../test/raw/sigma-wiki.txt")
-);
-
-#[cfg(test)]
-bench_trainer!(
-  bench_trainer_medium,
-  include_str!("../test/raw/npr-article-01.txt")
-);
-
-#[cfg(test)]
-bench_trainer!(
-  bench_trainer_long,
-  include_str!("../test/raw/the-sayings-of-confucius.txt")
-);
-
-#[cfg(test)]
-bench_trainer!(
-  bench_trainer_very_long,
-  include_str!("../test/raw/pride-and-prejudice.txt")
-);
+// commenting out benchmarks below, as they are not available on stable
+// we could use criterion instead
+// #[cfg(test)]
+// bench_trainer!(
+//   bench_trainer_short,
+//   include_str!("../test/raw/sigma-wiki.txt")
+// );
+//
+// #[cfg(test)]
+// bench_trainer!(
+//   bench_trainer_medium,
+//   include_str!("../test/raw/npr-article-01.txt")
+// );
+//
+// #[cfg(test)]
+// bench_trainer!(
+//   bench_trainer_long,
+//   include_str!("../test/raw/the-sayings-of-confucius.txt")
+// );
+//
+// #[cfg(test)]
+// bench_trainer!(
+//   bench_trainer_very_long,
+//   include_str!("../test/raw/pride-and-prejudice.txt")
+// );

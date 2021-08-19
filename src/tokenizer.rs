@@ -731,29 +731,30 @@ macro_rules! bench_word_tokenizer(
   )
 );
 
-#[cfg(test)]
-bench_word_tokenizer!(
-  word_tokenizer_bench_short,
-  include_str!("../test/raw/sigma-wiki.txt")
-);
-
-#[cfg(test)]
-bench_word_tokenizer!(
-  word_tokenizer_bench_medium,
-  include_str!("../test/raw/npr-article-01.txt")
-);
-
-#[cfg(test)]
-bench_word_tokenizer!(
-  word_tokenizer_bench_long,
-  include_str!("../test/raw/the-sayings-of-confucius.txt")
-);
-
-#[cfg(test)]
-bench_word_tokenizer!(
-  word_tokenizer_bench_very_long,
-  include_str!("../test/raw/pride-and-prejudice.txt")
-);
+// commenting out bench usage below: not available on stable
+// #[cfg(test)]
+// bench_word_tokenizer!(
+//   word_tokenizer_bench_short,
+//   include_str!("../test/raw/sigma-wiki.txt")
+// );
+//
+// #[cfg(test)]
+// bench_word_tokenizer!(
+//   word_tokenizer_bench_medium,
+//   include_str!("../test/raw/npr-article-01.txt")
+// );
+//
+// #[cfg(test)]
+// bench_word_tokenizer!(
+//   word_tokenizer_bench_long,
+//   include_str!("../test/raw/the-sayings-of-confucius.txt")
+// );
+//
+// #[cfg(test)]
+// bench_word_tokenizer!(
+//   word_tokenizer_bench_very_long,
+//   include_str!("../test/raw/pride-and-prejudice.txt")
+// );
 
 #[cfg(test)]
 macro_rules! bench_sentence_tokenizer(
@@ -774,20 +775,21 @@ macro_rules! bench_sentence_tokenizer(
   )
 );
 
-#[cfg(test)]
-bench_sentence_tokenizer!(
-  bench_sentence_tokenizer_train_on_document_short,
-  include_str!("../test/raw/sigma-wiki.txt")
-);
-
-#[cfg(test)]
-bench_sentence_tokenizer!(
-  bench_sentence_tokenizer_train_on_document_medium,
-  include_str!("../test/raw/npr-article-01.txt")
-);
-
-#[cfg(test)]
-bench_sentence_tokenizer!(
-  bench_sentence_tokenizer_train_on_document_long,
-  include_str!("../test/raw/pride-and-prejudice.txt")
-);
+// commenting out bench usage
+// #[cfg(test)]
+// bench_sentence_tokenizer!(
+//   bench_sentence_tokenizer_train_on_document_short,
+//   include_str!("../test/raw/sigma-wiki.txt")
+// );
+//
+// #[cfg(test)]
+// bench_sentence_tokenizer!(
+//   bench_sentence_tokenizer_train_on_document_medium,
+//   include_str!("../test/raw/npr-article-01.txt")
+// );
+//
+// #[cfg(test)]
+// bench_sentence_tokenizer!(
+//   bench_sentence_tokenizer_train_on_document_long,
+//   include_str!("../test/raw/pride-and-prejudice.txt")
+// );
